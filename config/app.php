@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://vast-gorge-54359.herokuapp.com/public/'),
 
     'asset_url' => env('ASSET_URL', null),
 
