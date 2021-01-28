@@ -16,7 +16,7 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->text('google_id');
+            $table->string('google_id');
             $table->text('description');
             $table->text('title');
             $table->text('author');
