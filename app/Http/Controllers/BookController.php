@@ -51,9 +51,11 @@ class BookController extends Controller
                 $error = "Book is in your list already";
             }else {
                 $userOrder = count($listedbooks) + 1;
+                $description = strlen($book->description) > 100 ? substr($book->description,0,100)
+                    : $book->description;
                 auth()->user()->books()->create([
                     'google_id' => $bookId,
-                    'description' => $book->volumeInfo->description,
+                    'description' => $description,
                     'title' => $book->volumeInfo->title,
                     'author' => addslashes(json_encode($book->volumeInfo->authors)),
                     'isbn' => json_encode($book->volumeInfo->industryIdentifiers),

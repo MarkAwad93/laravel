@@ -18,11 +18,11 @@ class CreateBooksTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('google_id');
             $table->text('description');
-            $table->string('title');
-            $table->string('author');
-            $table->string('isbn');
-            $table->string('publisher');
-            $table->string('image');
+            $table->text('title');
+            $table->text('author');
+            $table->text('isbn');
+            $table->text('publisher');
+            $table->text('image');
             $table->unsignedBigInteger('userOrder');
             $table->timestamps();
 
